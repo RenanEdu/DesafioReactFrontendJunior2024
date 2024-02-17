@@ -15,6 +15,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
+    "uuid": "^9.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -42,9 +43,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.7",
-    "jest": "^26.6.0",
+    "@types/uuid": "^9.0.8",
     "nock": "^13.1.1"
   }
 }

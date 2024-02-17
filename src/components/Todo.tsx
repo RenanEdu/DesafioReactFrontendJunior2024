@@ -1,7 +1,7 @@
 import React from "react";
 import InputComponent from "./Input/InputComponent";
 import ListComponent from "./List/ListComponent";
-import styles from "./todo.module.css";
+import styles from "./Todo.module.css";
 import { v4 as uuidv4 } from "uuid";
 
 export type Task = {
