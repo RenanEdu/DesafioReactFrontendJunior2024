@@ -1,0 +1,27 @@
+.wrapper {
+    max-width: 550px;
+    margin: 3rem auto;
+    padding-inline: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2),0 25px 50px 0 rgba(0,0,0,.1);
+    background-color: #fff;
+}
+
+.title {
+    color: #b83f45;
+    font-size: 5.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-container, .tasks-container {
+    width: 100%;
+}

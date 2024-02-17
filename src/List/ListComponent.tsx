@@ -1,4 +1,4 @@
-import React from "resct";
+import React from "react";
 import { Task } from "../Todo";
 import styles from "./styles.module.css";
 
@@ -6,7 +6,7 @@ type Props = {
     tasks: Task[];
     onComplete: (id: string) => void;
     onDelete: (id: string) => void;
-    onClearcompleted: () => void;
+    onClearCompleted: () => void;
 };
 
 type TaskProps = {
@@ -54,13 +54,16 @@ function TaskComponent(props: TaskProps) {
         </div>
       </li>
     </React.Fragment>
-    );
+  );
 }
 
-function TaskFooter() {}
+
+function TaskFooter() {
+  // Function implementation goes here
+}
 
 function ListComponent(props: Props) {
-    const { tasks, onComplete, onDelete, onClearcompleted } = props;
+    const { tasks, onComplete, onDelete } = props;
 
     return (
         <div className={styles["container"]}>
