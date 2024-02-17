@@ -1,0 +1,51 @@
+.container {
+    box-shadow: inset 0 -2 1px (0, 0, 0, .03);
+    height: 65px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.toggle-all_container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    height: 100%;
+}
+
+.toggle-all.input {
+    height: 100%;
+    width: 45px;
+    border: none;
+    margin: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toggle-all_input:checked+.toggle-all_label::before {
+    color: #484848;
+}
+
+.toggle-all_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.toggle-all_label::before {
+    content: ">";
+    color: #949494;
+    display: inline-block;
+    font-size: 22px;
+    padding: 10px 27px;
+    transform: rotate(90deg);
+}
