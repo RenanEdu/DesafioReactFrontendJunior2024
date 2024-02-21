@@ -58,9 +58,7 @@ function TaskComponent(props: TaskProps) {
 }
 
 
-function TaskFooter() {
-  // Function implementation goes here
-}
+// Remove the unused TaskFooter function
 
 function ListComponent(props: Props) {
     const { tasks, onComplete, onDelete } = props;

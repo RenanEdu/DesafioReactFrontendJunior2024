@@ -1,6 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import TodoApp from './TodoApp';
+// Remove the unused import statement for getByLabelText
+// import { getByLabelText } from '@testing-library/react';
 
 describe('TodoApp', () => {
     it('renders without crashing', () => {
@@ -28,11 +30,21 @@ describe('TodoApp', () => {
     });
 
     it('deletes a todo when the delete button is clicked', () => {
-        const { getByText, queryByText } = render(<TodoApp />);
+        
+        const { getByText, queryByText, fireEvent } = render(<TodoApp />);
+       
+        const { getByLabelText } = render(<TodoApp />);
+        
+        fireEvent.change(getByLabelText('Todo'), { target: { value: 'New Todo' } });
+        fireEvent.click(getByText('Add'));
+       
+        expect(queryByText('New Todo')).toBeInTheDocument();
+     
         const deleteButton = getByText('Delete');
+        
 
         fireEvent.click(deleteButton);
-
+        
         expect(queryByText('New Todo')).not.toBeInTheDocument();
     });
 });

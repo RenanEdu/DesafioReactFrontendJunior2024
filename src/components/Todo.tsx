@@ -91,7 +91,7 @@ function TodoComponent() {
   };
 
   return (
-    <main className={styles["wrapper"]}>
+    <main className={styles["wrapper"]} data-testid="todo--root">
       <h1 className={styles["title"]}>todos</h1>
       <section className={styles["container"]}>
         <div className={styles["input-container"]}>
